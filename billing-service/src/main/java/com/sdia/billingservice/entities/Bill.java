@@ -1,6 +1,6 @@
 package com.sdia.billingservice.entities;
 
-import com.sdia.billingservice.model.custumor;
+import com.sdia.billingservice.model.Customer;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,7 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class bill {
+public class Bill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,5 +22,5 @@ public class bill {
     private long customerId;
     @OneToMany(mappedBy = "bill")
     private List<ProductItem> productItems = new ArrayList<>();
-    @Transient private custumor customer;
+    @Transient private Customer customer;
 }

@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class custumor {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
