@@ -5,11 +5,9 @@ import com.sdia.billingservice.entities.bill;
 import com.sdia.billingservice.feign.ProductRestClient;
 import com.sdia.billingservice.feign.custumorRestClient;
 import com.sdia.billingservice.model.Product;
-import com.sdia.billingservice.model.customer;
-
+import com.sdia.billingservice.model.custumor;
 import com.sdia.billingservice.repository.BillRepository;
 import com.sdia.billingservice.repository.Productrepository;
-import com.sdia.inventoryservice.Repository.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -36,7 +34,7 @@ public class BillingServiceApplication {
                                         ProductRestClient productRestClient){
 
         return args -> {
-            Collection<customer> customers = customerRestClient.getAllCustomers().getContent();
+            Collection<custumor> customers = customerRestClient.GetAllCustumors().getContent();
             Collection<Product> products = productRestClient.getAllProducts().getContent();
 
             customers.forEach(customer -> {

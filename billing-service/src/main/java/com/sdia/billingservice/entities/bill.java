@@ -1,6 +1,6 @@
 package com.sdia.billingservice.entities;
 
-import com.sdia.billingservice.model.customer;
+import com.sdia.billingservice.model.custumor;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,5 +22,5 @@ public class bill {
     private long customerId;
     @OneToMany(mappedBy = "bill")
     private List<ProductItem> productItems = new ArrayList<>();
-    @Transient private customer customer;
+    @Transient private custumor customer;
 }
