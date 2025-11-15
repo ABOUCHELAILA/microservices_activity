@@ -1,8 +1,8 @@
 package com.sdia.billingservice.repository;
 
-import com.sdia.billingservice.entities.bill;
-import com.sdia.billingservice.model.Product;
+import com.sdia.billingservice.entities.ProductItem;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Productrepository extends JpaRepository<Product,Long> {
+public interface Productrepository extends JpaRepository<ProductItem,Long> {
 }
