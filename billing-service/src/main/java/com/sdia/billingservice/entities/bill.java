@@ -1,10 +1,12 @@
 package com.sdia.billingservice.entities;
 
+import com.sdia.billingservice.model.custumor;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -20,5 +22,5 @@ public class bill {
     private long customerId;
     @OneToMany(mappedBy = "bill")
     private List<ProductItem> productItems = new ArrayList<>();
-    @Transient private Customer customer;
+    @Transient private custumor customer;
 }

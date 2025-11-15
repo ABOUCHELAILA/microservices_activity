@@ -3,6 +3,7 @@ package com.sdia.billingservice.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import com.sdia.billingservice.model.Product;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,5 +19,7 @@ public class ProductItem {
     private bill bill;
     private int quantity;
     private double unitPrice;
+    @Transient
+    private Product product;
 
 }
